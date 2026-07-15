@@ -38,32 +38,7 @@ src/main.cpp          -> máquina de estados e laço principal
 | Software (bit-bang) | SDA 25 / SCL 26 | LCD 16x2 (PCF8574)     |
 
 O LCD usa um barramento **totalmente isolado por software** (biblioteca
-`SoftwareWire`), como exigido — nenhum dos MPUs compartilha esse barramento.
-
-### Por que um driver de LCD próprio?
-
-A biblioteca clássica `LiquidCrystal_I2C` está acoplada ao objeto global
-`Wire`, sendo incompatível com um barramento por software independente.
-Por isso, `display.h/.cpp` implementa diretamente o protocolo HD44780 em
-modo 4 bits sobre o expansor PCF8574, usando `SoftwareWire` como camada de
-transporte. Da mesma forma, `mpu.h/.cpp` é um driver próprio (em vez de uma
-lib de terceiros) porque a maioria das bibliotecas MPU9250 públicas também
-assume um único `Wire` global — aqui cada instância de `MPU9250` recebe seu
-próprio `TwoWire*` na inicialização (`attach()`), permitindo o uso de `Wire`
-e `Wire1` simultaneamente sem conflito.
-
-### Magnetômetro (AK8963)
-
-O AK8963 embutido em cada módulo GY-9250 responde sempre no endereço fixo
-`0x0C`. Como dois MPUs dividem o mesmo barramento físico, **não é seguro**
-manter o modo *bypass* ligado permanentemente (colisão de endereço). O
-driver resolve isso usando o **I2C Master interno do MPU9250**: o bypass é
-ativado apenas de forma transitória e sequencial durante `begin()` (um
-sensor por vez) só para configurar o AK8963; em operação normal, cada MPU
-lê seu próprio magnetômetro internamente e publica o resultado em
-`EXT_SENS_DATA_00..06`, sem nunca expor o AK8963 diretamente ao barramento
-externo.
-
+`SoftwareWire`)
 ## Máquina de estados
 
 ```
