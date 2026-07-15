@@ -105,5 +105,5 @@ MPU1: AD0→GND (0x68) · MPU2: AD0→3V3 (0x69) · MPU3: AD0→GND (0x68) · MP
 
 <img src="https://github.com/fipeA-dev/ESP32-FFTPBC-MODULE/blob/main/pcb1.jpg?raw=true" alt="PCB FRONT" width="500">
 
-
+<img src="https://github.com/fipeA-dev/ESP32-FFTPBC-MODULE/blob/main/pcb2.jpg?raw=true" alt="PCB BACK" width="500">
 
