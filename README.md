@@ -1,6 +1,6 @@
 # Firmware de Aquisição de Vibrações — ESP32 + 4x MPU9250
 
-Firmware industrial para aquisição simultânea de dados de 4 sensores MPU9250
+Firmware para aquisição simultânea de dados de 4 sensores MPU9250
 em uma PCB baseada em ESP32 DevKit V1, preparado para posterior processamento
 FFT.
 
