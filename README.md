@@ -101,3 +101,9 @@ taxa de amostragem (`Config::SAMPLE_RATE_HZ`, padrão 20 Hz).
 | Botão -      | GPIO27 (para GND, INPUT_PULLUP) |
 
 MPU1: AD0→GND (0x68) · MPU2: AD0→3V3 (0x69) · MPU3: AD0→GND (0x68) · MPU4: AD0→3V3 (0x69)
+
+
+<img src="https://github.com/fipeA-dev/ESP32-FFTPBC-MODULE/blob/main/pcb1.jpg?raw=true" alt="PCB FRONT" width="500">
+
+
+
