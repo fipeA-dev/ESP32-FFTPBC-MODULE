@@ -110,4 +110,4 @@ MPU1: AD0→GND (0x68) · MPU2: AD0→3V3 (0x69) · MPU3: AD0→GND (0x68) · MP
 Os pinos dos MPUs foram removidos, devido a utilização deles em longas distâncias, a imagem mostra somente ponto de referencia daonde irá as outras plaquinhas bases de sensores descritas abaixo
 
 <img src="https://github.com/fipeA-dev/ESP32-FFTPBC-MODULE/blob/main/pcb3.jpg?raw=true" alt="PCB BACK" width="500">
-<img src="https://github.com/fipeA-dev/ESP32-FFTPBC-MODULE/blob/main/pcb3.jpg?raw=true" alt="PCB BACK" width="500">
+<img src="https://github.com/fipeA-dev/ESP32-FFTPBC-MODULE/blob/main/pcb4.jpg?raw=true" alt="PCB BACK" width="500">
